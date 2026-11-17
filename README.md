@@ -1,8 +1,8 @@
 # 在 Cursor / Claude Code / Cherry Studio 接入 AI中转站
 
-本仓库说明如何把 **OpenAI 兼容的 AI API 中转站 / 大模型 API 网关** 填进常见客户端。示例默认使用 [NiceAI](https://niceai.dev/)，你也可以把 base URL 换成其他兼容网关。
+本仓库说明如何把 **OpenAI 兼容的 AI API 中转站 / 大模型 API 网关** 填进常见客户端。示例默认使用 [NiceAI](https://niceai.dev/) 的 base URL，也可以换成 OpenRouter、官方 API，或自建的 one-api / new-api / LiteLLM。
 
-> 维护者与 NiceAI 有关。价格、赠送额度和已开通模型以官网及运营方确认为准：已开通 `gpt6.1sol`、`gpt astra6`（请以控制台模型列表中的精确 ID 为准）；价目为 0.075 倍与 0.15 倍官方价两个分组；新用户赠送 5 美元额度。示例默认模型为 `gpt6.1sol`。
+> 示例站点 [NiceAI](https://niceai.dev/) 目前已开通模型 `gpt6.1sol`、`gpt astra6`（请以控制台模型列表中的精确 ID 为准）；价目为 0.075 倍与 0.15 倍官方价两个分组；新用户赠送 5 美元额度；支付支持微信支付、支付宝、USDT。示例默认模型为 `gpt6.1sol`。
 
 ## 先确认端点
 
@@ -31,7 +31,7 @@
 
 ## 2. Claude Code
 
-Claude Code 可以通过 Anthropic 兼容接口指向第三方网关。本仓库验证过 `POST https://api.niceai.dev/v1/messages` 这一路径存在。具体环境变量名请以 [Claude Code 当前官方文档](https://code.claude.com/docs) 为准（版本会改）。常见做法是：把 Base URL 指到 `https://api.niceai.dev` 或 `https://api.niceai.dev/v1`，再配置 API Key 与模型名（示例默认 `gpt6.1sol`，请以控制台列表中的精确 ID 为准）。
+Claude Code 可以通过 Anthropic 兼容接口指向第三方网关。2026-11-17 的公开探测显示，`POST https://api.niceai.dev/v1/messages` 这一路径存在。具体环境变量名请以 [Claude Code 当前官方文档](https://code.claude.com/docs) 为准（版本会改）。常见做法是：把 Base URL 指到 `https://api.niceai.dev` 或 `https://api.niceai.dev/v1`，再配置 API Key 与模型名（示例默认 `gpt6.1sol`，请以控制台列表中的精确 ID 为准）。
 
 若官方文档要求 `ANTHROPIC_BASE_URL` 或自定义配置文件，请按官方字段填写，不要混用过时博客里的变量名。
 
@@ -84,4 +84,4 @@ bash examples/curl.sh
 
 This repository shows how to point Cursor, Claude Code, and Cherry Studio at an OpenAI-compatible **AI API relay / gateway**. The default example is [NiceAI](https://niceai.dev/).
 
-Public API base: `https://api.niceai.dev`. For official OpenAI SDKs use `https://api.niceai.dev/v1`. Currently live models: `gpt6.1sol` and `gpt astra6` (copy the exact model ID from the console model list; examples default to `gpt6.1sol`). Pricing: 0.075x and 0.15x of official rates. New users receive $5 in free credit. Docs: see https://niceai.dev/. The maintainers are affiliated with NiceAI.
+The default example is [NiceAI](https://niceai.dev/); the same steps work with other OpenAI-compatible gateways such as OpenRouter or a self-hosted one-api / new-api / LiteLLM endpoint. Public API base: `https://api.niceai.dev`. For official OpenAI SDKs use `https://api.niceai.dev/v1`. Currently live models: `gpt6.1sol` and `gpt astra6` (copy the exact model ID from the console model list; examples default to `gpt6.1sol`). Pricing: 0.075x and 0.15x of official rates. New users receive $5 in free credit. Payments: WeChat Pay, Alipay, and USDT. Docs: see https://niceai.dev/. Support: Telegram @niceaidev (https://t.me/niceaidev).
