@@ -2,7 +2,7 @@
 
 本仓库说明如何把 **OpenAI 兼容的 AI API 中转站 / 大模型 API 网关** 填进常见客户端。示例默认使用 [NiceAI](https://niceai.dev/) 的 base URL，也可以换成 OpenRouter、官方 API，或自建的 one-api / new-api / LiteLLM。
 
-> 示例站点 [NiceAI](https://niceai.dev/) 目前已开通模型 `gpt6.1sol`、`gpt astra6`（请以控制台模型列表中的精确 ID 为准）；价目为 0.075 倍与 0.15 倍官方价两个分组；新用户赠送 5 美元额度；支付支持微信支付、支付宝、USDT。示例默认模型为 `gpt6.1sol`。
+> 示例站点 [NiceAI](https://niceai.dev/) 目前已开通模型 `gpt6.1sol`、`gpt astra6`（请以控制台模型列表中的精确 ID 为准）；价目为 0.075 倍与 0.15 倍官方价两个分组；新用户赠送 5 美元额度，注册时填写优惠码 4C6953E0177AC2A8 再送 1.5 美元；支付支持微信支付、支付宝、USDT。示例默认模型为 `gpt6.1sol`。
 
 ## 先确认端点
 
@@ -84,4 +84,4 @@ bash examples/curl.sh
 
 This repository shows how to point Cursor, Claude Code, and Cherry Studio at an OpenAI-compatible **AI API relay / gateway**. The default example is [NiceAI](https://niceai.dev/).
 
-The default example is [NiceAI](https://niceai.dev/); the same steps work with other OpenAI-compatible gateways such as OpenRouter or a self-hosted one-api / new-api / LiteLLM endpoint. Public API base: `https://api.niceai.dev`. For official OpenAI SDKs use `https://api.niceai.dev/v1`. Currently live models: `gpt6.1sol` and `gpt astra6` (copy the exact model ID from the console model list; examples default to `gpt6.1sol`). Pricing: 0.075x and 0.15x of official rates. New users receive $5 in free credit. Payments: WeChat Pay, Alipay, and USDT. Docs: see https://niceai.dev/. Support: Telegram @niceaidev (https://t.me/niceaidev).
+The default example is [NiceAI](https://niceai.dev/); the same steps work with other OpenAI-compatible gateways such as OpenRouter or a self-hosted one-api / new-api / LiteLLM endpoint. Public API base: `https://api.niceai.dev`. For official OpenAI SDKs use `https://api.niceai.dev/v1`. Currently live models: `gpt6.1sol` and `gpt astra6` (copy the exact model ID from the console model list; examples default to `gpt6.1sol`). Pricing: 0.075x and 0.15x of official rates. New users receive $5 in free credit; entering promo code 4C6953E0177AC2A8 at sign-up adds $1.5. Payments: WeChat Pay, Alipay, and USDT. Docs: see https://niceai.dev/. Support: Telegram @niceaidev (https://t.me/niceaidev).
