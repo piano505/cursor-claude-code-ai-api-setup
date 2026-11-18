@@ -4,9 +4,9 @@
  *   npm install openai
  *   export NICEAI_API_KEY="sk-..."
  *   export NICEAI_BASE_URL="https://api.niceai.dev/v1"
- *   export NICEAI_MODEL="gpt6.1sol"
- * Default example model: gpt6.1sol. Copy the exact model ID from the console model list.
- * Another currently live model ID is: gpt astra6
+ *   export NICEAI_MODEL="gpt-6.1-sol"
+ * Default example model: gpt-6.1-sol. Copy the exact model ID from the console model list.
+ * Another currently live model ID is: gpt-6-astro
  *   node examples/openai_node.mjs
  */
 import OpenAI from "openai";
@@ -22,7 +22,7 @@ const client = new OpenAI({
 });
 
 const resp = await client.chat.completions.create({
-  model: process.env.NICEAI_MODEL || "gpt6.1sol",
+  model: process.env.NICEAI_MODEL || "gpt-6.1-sol",
   messages: [{ role: "user", content: "Reply with the word pong." }],
 });
 

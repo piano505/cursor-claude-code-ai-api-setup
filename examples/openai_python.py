@@ -4,9 +4,9 @@ OpenAI official Python SDK against an OpenAI-compatible relay (NiceAI).
   pip install openai
   export NICEAI_API_KEY="sk-..."
   export NICEAI_BASE_URL="https://api.niceai.dev/v1"
-  export NICEAI_MODEL="gpt6.1sol"
-  # Default example model: gpt6.1sol. Copy the exact model ID from the console model list.
-  # Another currently live model ID is: gpt astra6
+  export NICEAI_MODEL="gpt-6.1-sol"
+  # Default example model: gpt-6.1-sol. Copy the exact model ID from the console model list.
+  # Another currently live model ID is: gpt-6-astro
   python examples/openai_python.py
 """
 
@@ -23,7 +23,7 @@ client = OpenAI(
 )
 
 resp = client.chat.completions.create(
-    model=os.environ.get("NICEAI_MODEL", "gpt6.1sol"),
+    model=os.environ.get("NICEAI_MODEL", "gpt-6.1-sol"),
     messages=[{"role": "user", "content": "Reply with the word pong."}],
 )
 
